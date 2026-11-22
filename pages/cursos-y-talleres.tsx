@@ -28,9 +28,62 @@ export default function CursosYTalleres() {
         </div>
       </div>
 
+      {/* Próximo taller */}
+      <section className="ma-section ma-section--beige" id="proximo-taller">
+        <div className="ma-section__inner">
+          <div className="ma-taller" data-reveal>
+            <div className="ma-taller__text">
+              <p className="ma-heading__eyebrow">Próximo taller</p>
+              <h2 className="ma-heading__title">
+                Coaching: <em>El Arte de Acompañar</em>
+              </h2>
+              <div className="ma-heading__line" />
+              <p className="ma-taller__desc">
+                Un espacio para descubrir que el rol del coach no consiste en demostrar perfección
+                ni resolverle la vida al cliente, sino en <strong>crear un espacio seguro de presencia,
+                escucha activa y confianza</strong>, transformando tu mirada sobre las competencias.
+              </p>
+
+              <ul className="ma-taller__datos">
+                <li><span>Fecha</span>5 de diciembre</li>
+                <li><span>Horario</span>9 a 11 hs (Argentina)</li>
+                <li><span>Modalidad</span>Abierto, gratuito y online</li>
+                <li><span>Facilitan</span>Mariana Álvarez y Eliana Prieto</li>
+                <li><span>Dirigido a</span>Coaches, estudiantes de coaching y quienes quieran saber de coaching</li>
+                <li><span>Organiza</span>Coaching en dos</li>
+              </ul>
+
+              <a
+                href="https://forms.gle/sXq1RjiVDJtXe6WX7"
+                className="ma-btn-primary ma-taller__btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Inscribirme gratis
+              </a>
+            </div>
+
+            <a
+              href="https://forms.gle/sXq1RjiVDJtXe6WX7"
+              className="ma-taller__flyer"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Inscribirme al taller Coaching: El Arte de Acompañar"
+            >
+              <img
+                src="/img/cursos/taller-arte-de-acompanar.jpeg"
+                alt="Flyer del taller Coaching: El Arte de Acompañar, con Mariana Álvarez y Eliana Prieto. 5 de diciembre, 9 hs Argentina. Abierto, gratuito y online."
+                width={900}
+                height={1600}
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="ma-section ma-section--light">
         <div className="ma-section__inner">
-          <div className="ma-heading">
+          <div className="ma-heading" data-reveal>
             <p className="ma-heading__eyebrow">Cursos disponibles</p>
             <h2 className="ma-heading__title">
               Cursos que podés <em>hacer conmigo</em>
@@ -42,7 +95,18 @@ export default function CursosYTalleres() {
             </p>
           </div>
 
-          <div className="ma-cursos-grid">
+          <div className="ma-cursos-video" data-reveal>
+            <video
+              src="/video/necesito-venderme.mp4"
+              controls
+              playsInline
+              preload="metadata"
+              poster="/img/cursos/curso3.jpeg"
+              className="ma-cursos-video__player"
+            />
+          </div>
+
+          <div className="ma-cursos-grid" data-reveal-stagger>
             {FOTOS.map((foto) => (
               <a
                 key={foto.src}
@@ -81,7 +145,7 @@ export default function CursosYTalleres() {
 
       <section className="ma-section ma-section--beige">
         <div className="ma-section__inner">
-          <div className="ma-heading ma-heading--center">
+          <div className="ma-heading ma-heading--center" data-reveal>
             <p className="ma-heading__eyebrow">Temáticas disponibles</p>
             <h2 className="ma-heading__title">¿Sobre qué <em>trabajamos</em>?</h2>
             <div className="ma-heading__line" style={{ margin: '16px auto' }} />

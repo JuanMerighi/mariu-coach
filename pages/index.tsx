@@ -7,7 +7,12 @@ const CARDS = [
     img: '/img/foto-home.jpeg',
     imgPos: 'center top',
     title: 'Sobre mí',
-    text: 'Coach Ontológica Profesional ACC certificada ICF. Especialista en Inteligencia Emocional, PNL y Neurociencias.',
+    text: [
+      'Coach Ontológica Profesional ACC – ICF',
+      'Coach Ejecutivo e Inmobiliario',
+      'Coach de Ventas',
+      'Especialista en Inteligencia Emocional – PNL y Neurociencias',
+    ],
     href: '/sobre-mi',
   },
   {
@@ -29,8 +34,7 @@ const CARDS = [
     imgPos: 'center center',
     title: 'Charlas',
     text: 'Escuchame hablar sobre coaching, inteligencia emocional y transformación personal en conferencias y entrevistas.',
-    href: 'https://www.youtube.com/@coach.marianaalvarez',
-    external: true,
+    href: '/charlas',
   },
 ];
 
@@ -45,14 +49,15 @@ export default function Home() {
       {/* Hero */}
       <section className="ma-hero">
         <div className="ma-hero__text">
-          <p className="ma-hero__label">Coach Profesional Certificada ICF</p>
+          <p className="ma-hero__label">Coach Profesional y Ejecutivo ACC – ICF</p>
           <h1 className="ma-hero__title">
             El cambio que buscás<br />
             empieza con una<br />
             <em>conversación.</em>
           </h1>
           <p className="ma-hero__subtitle">
-            Acompañamiento profesional para transformar tu vida desde adentro.
+            Acompañamiento profesional para transformar tu vida desde adentro,
+            tu profesión, tu vida empresarial, tu PYME, tu empresa.
             Sesiones presenciales y virtuales desde Buenos Aires al mundo.
           </p>
           <div className="ma-hero__ctas">
@@ -81,7 +86,7 @@ export default function Home() {
       {/* El proceso */}
       <section className="ma-section ma-section--light">
         <div className="ma-section__inner">
-          <div className="ma-heading">
+          <div className="ma-heading" data-reveal>
             <p className="ma-heading__eyebrow">Mariana Alvarez Coach</p>
             <h2 className="ma-heading__title">
               Un acompañamiento<br />a medida de <em>tu proceso</em>
@@ -93,7 +98,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="ma-cards">
+          <div className="ma-cards" data-reveal-stagger>
             {CARDS.map((card) => (
               <article key={card.href} className="ma-cards__item">
                 <img
@@ -104,16 +109,16 @@ export default function Home() {
                 />
                 <div className="ma-cards__body">
                   <h3 className="ma-cards__title">{card.title}</h3>
-                  <p className="ma-cards__text">{card.text}</p>
-                  {card.external ? (
-                    <a href={card.href} className="ma-cards__link" target="_blank" rel="noopener noreferrer">
-                      Ver más →
-                    </a>
-                  ) : (
-                    <Link href={card.href} className="ma-cards__link">
-                      Ver más →
-                    </Link>
-                  )}
+                  <p className="ma-cards__text">
+                    {Array.isArray(card.text)
+                      ? card.text.map((line, i) => (
+                          <span key={line}>{i > 0 && <br />}{line}</span>
+                        ))
+                      : card.text}
+                  </p>
+                  <Link href={card.href} className="ma-cards__link">
+                    Ver más →
+                  </Link>
                 </div>
               </article>
             ))}
@@ -124,7 +129,7 @@ export default function Home() {
       {/* CTA oscuro */}
       <section className="ma-section ma-section--dark">
         <div className="ma-section__inner" style={{ textAlign: 'center' }}>
-          <div className="ma-heading ma-heading--center">
+          <div className="ma-heading ma-heading--center" data-reveal>
             <p className="ma-heading__eyebrow" style={{ color: 'rgba(196,154,108,0.8)' }}>Primera sesión</p>
             <h2 className="ma-heading__title ma-heading__title--white">
               ¿Querés dar el primer paso?

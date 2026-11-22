@@ -24,7 +24,7 @@ export default function Charlas() {
 
       <section className="ma-section ma-section--light">
         <div className="ma-section__inner">
-          <div className="ma-heading">
+          <div className="ma-heading" data-reveal>
             <p className="ma-heading__eyebrow">Conferencias y entrevistas</p>
             <h2 className="ma-heading__title">
               El coaching en <em>acción</em>
@@ -37,7 +37,7 @@ export default function Charlas() {
             </p>
           </div>
 
-          <div className="ma-charla-video">
+          <div className="ma-charla-video" data-reveal>
             <iframe
               src="https://www.youtube.com/embed/nndwIqlyW20"
               title="Charla Mariana Alvarez Coach"

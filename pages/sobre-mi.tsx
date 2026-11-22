@@ -3,7 +3,9 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 
 const CREDENCIALES = [
+  'Coach Ejecutivo y de Liderazgo',
   'Coach Profesional ACC — ICF (International Coaching Federation)',
+  'Coach Inmobiliario',
   'Coach en Neurociencias',
   'Analista en Comunicación No Verbal',
   'Diplomada en Inteligencia Emocional, Consciencia Corporal y Neurociencias aplicadas, PNL',
@@ -43,14 +45,14 @@ export default function SobreMi() {
             </div>
 
             <div className="ma-sobre__text">
-              <div className="ma-heading">
+              <div className="ma-heading" data-reveal>
                 <p className="ma-heading__eyebrow">Mi historia</p>
                 <h2 className="ma-heading__title">Hola, soy <em>Mariana</em></h2>
                 <div className="ma-heading__line" />
               </div>
 
               <p>
-                En medio de la pandemia de Covid, me certifiqué como Analista en Comunicación No Verbal y más luego en Coach Ontológico Profesional ACC con el aval internacional más alto en International Coaching Federation; también soy Coach en Neurociencias, me diplomé en Neurociencias aplicadas e Inteligencia Emocional y Consciencia Corporal, Liderazgo, Dinámicas para Equipos, Coaching de ventas y Storytelling & Customer Experience Basada en Disney y PNL.
+                En medio de la pandemia de Covid, me certifiqué como Analista en Comunicación No Verbal y más luego en Coach Ontológico Profesional ACC con el aval internacional más alto en International Coaching Federation; también soy Coach en Neurociencias, me diplomé en Neurociencias aplicadas e Inteligencia Emocional y Consciencia Corporal, Liderazgo, Dinámicas para Equipos, Coaching de ventas y Storytelling & Customer Experience Basada en Disney y PNL. Además, me certifiqué como Coach Ejecutivo y de Liderazgo y como Coach Inmobiliario.
               </p>
               <p>
                 Facilito procesos dinámicos, cursos, talleres y charlas en Empresas y soy Formadora de futuros Coaches en la Escuela de coaching Lider Coach Profesional.
@@ -62,7 +64,7 @@ export default function SobreMi() {
                 Esas experiencias me hicieron quien soy hoy: una coach que acompaña desde un lugar genuino, con herramientas profesionales y mucha humanidad.
               </p>
 
-              <div className="ma-credenciales">
+              <div className="ma-credenciales" data-reveal-stagger>
                 {CREDENCIALES.map((c) => (
                   <div key={c} className="ma-credencial">{c}</div>
                 ))}

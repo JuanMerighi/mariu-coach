@@ -47,14 +47,14 @@ export default function ComoFunciona() {
 
       <section className="ma-section ma-section--light">
         <div className="ma-section__inner">
-          <div className="ma-heading ma-heading--center">
+          <div className="ma-heading ma-heading--center" data-reveal>
             <p className="ma-heading__eyebrow">El proceso</p>
             <h2 className="ma-heading__title">¿Cómo son las sesiones?</h2>
             <div className="ma-heading__line" style={{ margin: '16px auto' }} />
             <p className="ma-heading__desc">Simple, flexible y adaptado a tu realidad.</p>
           </div>
 
-          <div className="ma-pasos">
+          <div className="ma-pasos" data-reveal-stagger>
             {PASOS.map((paso) => (
               <div key={paso.num} className="ma-pasos__item">
                 <div className="ma-pasos__num">{paso.num}</div>

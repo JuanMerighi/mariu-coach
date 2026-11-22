@@ -11,7 +11,7 @@ export default function Contacto() {
 
       <section className="ma-section ma-section--dark" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
         <div className="ma-section__inner" style={{ width: '100%' }}>
-          <div className="ma-heading">
+          <div className="ma-heading" data-reveal>
             <p className="ma-heading__eyebrow" style={{ color: 'rgba(196,154,108,0.8)' }}>Contacto</p>
             <h1 className="ma-heading__title ma-heading__title--white" style={{ color: 'white' }}>
               ¿Estás listo/a para<br /><em style={{ color: 'var(--accent)' }}>dar el primer paso?</em>
@@ -23,7 +23,7 @@ export default function Contacto() {
             </p>
           </div>
 
-          <div className="ma-contacto-cards">
+          <div className="ma-contacto-cards" data-reveal-stagger>
             <a
               href="https://wa.me/5491163552105?text=Hola%20Mariana!%20Vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20agendar%20una%20sesi%C3%B3n."
               className="ma-contacto-cards__item ma-contacto-cards__item--link"

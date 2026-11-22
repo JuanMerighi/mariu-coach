@@ -64,7 +64,7 @@ export default function Coaching() {
 
       <section className="ma-section ma-section--light">
         <div className="ma-section__inner">
-          <div className="ma-heading">
+          <div className="ma-heading" data-reveal>
             <p className="ma-heading__eyebrow">¿Qué es el coaching?</p>
             <h2 className="ma-heading__title">
               Un proceso que te transforma<br /><em>desde adentro</em>
@@ -76,7 +76,7 @@ export default function Coaching() {
             </p>
           </div>
 
-          <div className="ma-coaching-grid">
+          <div className="ma-coaching-grid" data-reveal-stagger>
             {CARDS.map((card) => (
               <div key={card.title} className="ma-ccard">
                 <div className="ma-coaching-grid__icon">{card.icon}</div>
